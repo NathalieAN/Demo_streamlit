@@ -111,9 +111,9 @@ def user_input_features():
     input_features = {}
     input_features["age"] = st.sidebar.slider('Age', 18, 95)
     input_features["balance"]= st.sidebar.slider('Current balance', -10000, 150000)
-    input_features["contact"] = st.sidebar.selectbox('Best way to contact you', ['cellular', 'telephone', 'unknown'])
+    input_features["contact"] = st.sidebar.selectbox('Contact', ['Portable', 'Fixe', 'Non mentionné'])
     input_features["duration"] = st.sidebar.slider('Duration', 0, 5000)
-    input_features["campaign"] = st.sidebar.slider('Campaign', 1, 63)
+    
 
     
     return [input_features]
