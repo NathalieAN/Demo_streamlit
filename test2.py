@@ -21,7 +21,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import plot_tree
 from sklearn import tree
 
-import shap
 from IPython.display import display
 import matplotlib.pyplot as plt
 
@@ -33,10 +32,10 @@ from sklearn.metrics import precision_score, recall_score
 
 
 def main():
-    st.title("Binary Classification Web App")
-    st.sidebar.title("Binary Classification Web App")
-    st.markdown("Are your mushrooms edible or poisonous?🍄")
-    st.sidebar.markdown("Are your mushrooms edible or poisonous?🍄")
+    st.title("CAPYTAL PROJECT")
+    st.sidebar.title("BANK MARKETING WEB APP")
+    st.markdown("New deposit project")
+    st.sidebar.markdown("Is the prospect willing to sign")
 
 
     @st.cache(persist=True)
@@ -49,7 +48,7 @@ def main():
 
     @st.cache(persist=True)
     def split(df):
-        y = df.type
+        y = df.y
         x = df.drop(columns =['y'])
         x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
         return x_train, x_test, y_train, y_test
